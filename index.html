@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="creative-medium" content="other" />
+  <title>Hispirit 农村村务管理系统 — 数字乡村 · 智慧村务</title>
+  <meta name="description" content="Hispirit 团队打造的现代化农村村务管理综合平台，覆盖居民管理、人口统计、社会救助、党建管理、调解仲裁、数据安全等核心业务，支持亮/暗模式切换，免费试用。" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://miaoda.feishu.cn" />
+  <link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" />
+</head>
+<body>
+  <!-- ========== 顶部导航 ========== -->
+  <header class="site-header" id="siteHeader">
+    <div class="container nav-wrap">
+      <a href="#home" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 32 32" width="28" height="28">
+            <path d="M4 24 L16 6 L28 24 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M10 24 L16 16 L22 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+          </svg>
+        </span>
+        <span class="brand-text">
+          <span class="brand-name">Hispirit</span>
+          <span class="brand-sub">农村村务管理系统</span>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="主导航">
+        <ul>
+          <li><a href="#features">核心功能</a></li>
+          <li><a href="#modules">业务模块</a></li>
+          <li><a href="#showcase">产品展示</a></li>
+          <li><a href="#security">数据安全</a></li>
+          <li><a href="#contact">联系我们</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="theme-toggle" aria-label="切换亮/暗模式" title="切换亮/暗模式">
+          <svg class="icon-sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <line x1="12" y1="2" x2="12" y2="5"/>
+              <line x1="12" y1="19" x2="12" y2="22"/>
+              <line x1="2" y1="12" x2="5" y2="12"/>
+              <line x1="19" y1="12" x2="22" y2="12"/>
+              <line x1="4.93" y1="4.93" x2="7.05" y2="7.05"/>
+              <line x1="16.95" y1="16.95" x2="19.07" y2="19.07"/>
+              <line x1="4.93" y1="19.07" x2="7.05" y2="16.95"/>
+              <line x1="16.95" y1="7.05" x2="19.07" y2="4.93"/>
+            </g>
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" fill="currentColor"/>
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm">联系QQ</a>
+      </div>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="打开菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========== Hero 区 ========== -->
+  <section class="hero" id="home">
+    <div class="hero-pattern" aria-hidden="true"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          Hispirit 团队出品 · 数字乡村解决方案
+        </span>
+        <h1 class="hero-title">
+          让村务管理<br />
+          <span class="accent">更智慧 · 更透明 · 更暖心</span>
+        </h1>
+        <p class="hero-desc">
+          基于 Django + React 打造的现代化农村村务管理综合平台，覆盖居民管理、人口统计、社会救助、党建管理、调解仲裁、数据安全等核心业务，
+          助力乡村治理从"经验驱动"走向"数据驱动"。
+        </p>
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">
+            联系QQ咨询
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+          <a href="#features" class="btn btn-ghost btn-lg">了解核心功能</a>
+        </div>
+        <ul class="hero-meta">
+          <li>
+            <strong>6+</strong>
+            <span>核心业务模块</span>
+          </li>
+          <li>
+            <strong>100%</strong>
+            <span>数据本地化部署</span>
+          </li>
+          <li>
+            <strong>24/7</strong>
+            <span>技术支持服务</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-img-frame">
+          <div class="hero-img-inner">
+            <img src="assets/hero.jpg" alt="农村村务管理系统主界面预览" loading="eager" />
+          </div>
+          <div class="float-card float-card-left">
+            <span class="fc-label">今日待办</span>
+            <span class="fc-value">12 项</span>
+          </div>
+          <div class="float-card float-card-right">
+            <span class="fc-label">居民满意度</span>
+            <span class="fc-value">98.6%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 田垄分割线 -->
+    <div class="field-divider" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </section>
+
+  <!-- ========== 核心亮点 ========== -->
+  <section class="section features" id="features">
+    <div class="container">
+      <header class="section-head">
+        <span class="section-eyebrow">— 核心能力 —</span>
+        <h2 class="section-title">为乡村治理量身打造的六大能力</h2>
+        <p class="section-desc">
+          从居民信息到党建工作，从社会救助到纠纷调解，一个平台管全村，让村干部减负、让老百姓省心。
+        </p>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22 21v-2a4 4 0 0 0-3-3.87" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>居民管理</h3>
+          <p>一户一档，完整记录家庭成员信息、户籍变动、联系方式，支持多维度检索与批量导出。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <path d="M3 3v18h18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="7" y="12" width="3" height="6" fill="currentColor"/>
+              <rect x="12" y="8" width="3" height="10" fill="currentColor"/>
+              <rect x="17" y="5" width="3" height="13" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>人口统计</h3>
+          <p>按年龄、性别、劳动力、外出务工等维度自动生成统计报表，一键掌握全村人口结构。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <path d="M12 2l3 7h7l-5.5 4.5L18 21l-6-4-6 4 1.5-7.5L2 9h7z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>社会救助</h3>
+          <p>低保、五保、临时救助全流程在线办理，自动核查资格条件，确保精准帮扶、阳光透明。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <path d="M12 2L3 7v6c0 5 3.8 9.4 9 10 5.2-.6 9-5 9-10V7L12 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>党建管理</h3>
+          <p>党员信息、三会一课、主题党日、党费收缴全流程数字化，让基层党建工作更有抓手。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M7 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M15 12h2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>调解仲裁</h3>
+          <p>邻里纠纷、土地矛盾等村级调解在线登记、跟踪、归档，做到事事有回音、件件有结果。</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <rect x="4" y="11" width="16" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M8 11V7a4 4 0 0 1 8 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3>数据安全</h3>
+          <p>支持本地化部署、角色权限分级、操作日志全留痕，筑牢村级数据安全防线。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 业务模块详情（图片 + 文字交替） ========== -->
+  <section class="section modules" id="modules">
+    <div class="container">
+      <header class="section-head center">
+        <span class="section-eyebrow">— 业务模块 —</span>
+        <h2 class="section-title">覆盖村务工作的每一个场景</h2>
+      </header>
+
+      <!-- 模块 1：居民查询 -->
+      <div class="module-row">
+        <div class="module-media">
+          <div class="module-img-wrap">
+            <img src="assets/feature1.jpg" alt="居民查询功能界面" loading="lazy" />
+          </div>
+          <span class="module-tag">01 · 居民查询</span>
+        </div>
+        <div class="module-copy">
+          <span class="module-eyebrow">快速检索 · 精准定位</span>
+          <h3>高效的居民信息查询</h3>
+          <p>
+            支持按姓名、身份证号、门牌号、联系电话等多维度组合查询，
+            秒级定位居民档案，查看家庭成员、户籍信息、帮扶记录等全景资料，
+            告别纸质档案翻找的低效与不便。
+          </p>
+          <ul class="check-list">
+            <li>多条件组合检索，模糊匹配更智能</li>
+            <li>一户一档全视图，家庭关系清晰呈现</li>
+            <li>查询结果支持导出与打印</li>
+            <li>历史变更记录可追溯、可审计</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 模块 2：个性化设置 / 黑夜模式 -->
+      <div class="module-row reverse">
+        <div class="module-media">
+          <div class="module-img-wrap">
+            <img src="assets/feature2.jpg" alt="个性化设置与黑夜模式界面" loading="lazy" />
+          </div>
+          <span class="module-tag">02 · 个性化设置</span>
+        </div>
+        <div class="module-copy">
+          <span class="module-eyebrow">贴心体验 · 自由定制</span>
+          <h3>支持亮/暗模式等个性化样式</h3>
+          <p>
+            系统内置亮/暗模式一键切换，白天清爽明亮、夜间护眼舒适，
+            适应不同办公时段与使用习惯。还可自定义主题色、字号、布局密度等，
+            让每一位村干部都能调出最顺手的使用体验。
+          </p>
+          <ul class="check-list">
+            <li>亮/暗模式一键切换，偏好自动记忆</li>
+            <li>多种主题色可选，贴合各村风格</li>
+            <li>字号与布局密度可调，适配不同年龄用户</li>
+            <li>清爽界面设计，操作简单易上手</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 模块 3：添加居民 -->
+      <div class="module-row">
+        <div class="module-media">
+          <div class="module-img-wrap">
+            <img src="assets/feature3.jpg" alt="添加居民功能界面" loading="lazy" />
+          </div>
+          <span class="module-tag">03 · 添加居民</span>
+        </div>
+        <div class="module-copy">
+          <span class="module-eyebrow">信息采集 · 便捷录入</span>
+          <h3>便捷的居民信息录入</h3>
+          <p>
+            结构化表单引导式录入，必填项清晰标注，支持身份证号自动解析性别与出生日期，
+            减少手工输入工作量。家庭成员可关联添加，批量导入模板一键生成，
+            大幅提升档案建立与更新效率。
+          </p>
+          <ul class="check-list">
+            <li>引导式表单，必填项一目了然</li>
+            <li>身份证自动解析，减少录入错误</li>
+            <li>家庭成员一键关联，避免重复录入</li>
+            <li>批量导入模板，快速完成档案初始化</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 模块 4：党建管理 -->
+      <div class="module-row reverse">
+        <div class="module-media">
+          <div class="module-img-wrap">
+            <img src="assets/party.jpg" alt="党建管理功能界面" loading="lazy" />
+          </div>
+          <span class="module-tag">04 · 党建引领</span>
+        </div>
+        <div class="module-copy">
+          <span class="module-eyebrow">党建引领 · 基层堡垒</span>
+          <h3>让党建工作看得见、摸得着</h3>
+          <p>
+            从党员发展到组织生活，从党费收缴到志愿服务，党建管理模块将村级党务工作全面数字化。
+            支部工作有记录、党员表现有量化、学习教育有抓手，真正发挥基层党组织战斗堡垒作用。
+          </p>
+          <ul class="check-list">
+            <li>党员信息动态管理，组织关系线上转接</li>
+            <li>三会一课、主题党日全程留痕</li>
+            <li>党员积分制管理，激发先锋模范作用</li>
+            <li>学习资源库，随时随地在线学习</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 产品展示（图片网格） ========== -->
+  <section class="section showcase" id="showcase">
+    <div class="container">
+      <header class="section-head center">
+        <span class="section-eyebrow">— 产品掠影 —</span>
+        <h2 class="section-title">清爽界面 · 流畅体验</h2>
+        <p class="section-desc">
+          现代化界面设计，支持亮/暗模式自由切换，无论是白天办公还是夜间值班，都能舒适使用。
+        </p>
+      </header>
+
+      <div class="showcase-grid">
+        <figure class="showcase-item span-2">
+          <img src="assets/img1.jpg" alt="系统总览界面" loading="lazy" />
+          <figcaption>总览驾驶舱</figcaption>
+        </figure>
+        <figure class="showcase-item">
+          <img src="assets/feature1.jpg" alt="居民查询界面" loading="lazy" />
+          <figcaption>居民查询</figcaption>
+        </figure>
+        <figure class="showcase-item">
+          <img src="assets/feature3.jpg" alt="添加居民界面" loading="lazy" />
+          <figcaption>添加居民</figcaption>
+        </figure>
+        <figure class="showcase-item">
+          <img src="assets/feature2.jpg" alt="个性化设置与黑夜模式界面" loading="lazy" />
+          <figcaption>个性化设置</figcaption>
+        </figure>
+        <figure class="showcase-item">
+          <img src="assets/img3.jpg" alt="社会救助办理界面" loading="lazy" />
+          <figcaption>社会救助办理</figcaption>
+        </figure>
+        <figure class="showcase-item span-2">
+          <img src="assets/party.jpg" alt="党建管理功能界面" loading="lazy" />
+          <figcaption>党建管理模块</figcaption>
+        </figure>
+        <figure class="showcase-item span-2">
+          <img src="assets/hero.jpg" alt="系统主界面预览" loading="lazy" />
+          <figcaption>系统主界面</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 本地化部署 · 数据安全核心卖点 ========== -->
+  <section class="section local-deploy" id="security">
+    <div class="container">
+      <header class="section-head center">
+        <span class="section-eyebrow">— 数据安全 · 核心卖点 —</span>
+        <h2 class="section-title">本地化部署 · 不联网 · 居民信息更安全</h2>
+        <p class="section-desc">
+          系统完全部署在村/镇本地服务器，数据不经过云端、不上传外网，
+          从源头上保障居民个人信息安全，符合政务数据安全与隐私保护要求。
+        </p>
+      </header>
+
+      <!-- 对比区 -->
+      <div class="compare-wrap">
+        <div class="compare-card compare-bad">
+          <div class="compare-head">
+            <span class="compare-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path d="M12 2L2 7v6c0 5 4 9 10 10 6-1 10-5 10-10V7L12 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="3 3" stroke-linejoin="round"/>
+                <path d="M4 20L20 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+            <h3>云服务模式</h3>
+          </div>
+          <ul class="compare-list">
+            <li>数据存放在第三方云服务器</li>
+            <li>需要互联网连接才能使用</li>
+            <li>居民信息可能经过公网传输</li>
+            <li>数据控制权不在本村</li>
+            <li>存在云端数据泄露风险</li>
+            <li>受网络波动影响大</li>
+          </ul>
+        </div>
+
+        <div class="compare-vs">
+          <span>VS</span>
+        </div>
+
+        <div class="compare-card compare-good">
+          <div class="compare-head">
+            <span class="compare-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7L12 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </span>
+            <h3>本地化部署</h3>
+            <span class="compare-recommend">推荐</span>
+          </div>
+          <ul class="compare-list good">
+            <li>数据完全存储在村/镇本地服务器</li>
+            <li>支持离线/内网使用，无需公网</li>
+            <li>居民信息全程不出村，不外传</li>
+            <li>数据完全由本村掌控，自主可控</li>
+            <li>从源头杜绝云端泄露风险</li>
+            <li>断网也能正常使用，稳定可靠</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 四大安全保障 -->
+      <div class="security-features">
+        <div class="sec-feat">
+          <div class="sec-feat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7L12 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h4>数据不出村</h4>
+          <p>所有居民档案、党建资料、救助记录等核心数据全部存储于本地服务器，不上传任何云端，物理隔离确保安全。</p>
+        </div>
+
+        <div class="sec-feat">
+          <div class="sec-feat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="10" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>隐私合规</h4>
+          <p>严格遵循个人信息保护法与政务数据安全规范，居民身份证号、手机号等敏感字段加密存储，分级授权查看。</p>
+        </div>
+
+        <div class="sec-feat">
+          <div class="sec-feat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>操作全留痕</h4>
+          <p>每一条数据的增删改查均有完整审计日志，何人何时做了什么操作一目了然，满足政务数据追溯要求。</p>
+        </div>
+
+        <div class="sec-feat">
+          <div class="sec-feat-icon">
+            <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="9" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 11v.01M16 13v.01M12 15v.01" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>细粒度权限</h4>
+          <p>按角色 + 数据范围双重控制，村干部、计生专干、民政专干各负其责，敏感信息仅授权人员可查看。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 技术底座 ========== -->
+  <section class="section tech-section">
+    <div class="container">
+      <div class="tech-row">
+        <div class="tech-copy">
+          <span class="section-eyebrow">— 技术底座 —</span>
+          <h2 class="section-title">成熟技术栈 · 稳定可靠</h2>
+          <p class="section-desc">
+            采用 Django 后端 + React 前端的成熟技术栈，前后端分离架构，性能优异、维护便捷。
+            本地部署模式下，断网也能用，数据零外流。
+          </p>
+        </div>
+        <div class="tech-badges">
+          <div class="tech-badge">
+            <span class="tb-icon">DJ</span>
+            <div>
+              <strong>Django</strong>
+              <p>Python 成熟 Web 框架</p>
+            </div>
+          </div>
+          <div class="tech-badge">
+            <span class="tb-icon">R</span>
+            <div>
+              <strong>React</strong>
+              <p>组件化前端架构</p>
+            </div>
+          </div>
+          <div class="tech-badge">
+            <span class="tb-icon">DB</span>
+            <div>
+              <strong>本地数据库</strong>
+              <p>数据完全自主可控</p>
+            </div>
+          </div>
+          <div class="tech-badge">
+            <span class="tb-icon">OS</span>
+            <div>
+              <strong>离线可用</strong>
+              <p>断网环境正常运行</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 定价方案 ========== -->
+  <section class="section pricing-section" id="pricing">
+    <div class="container">
+      <header class="section-head center">
+        <span class="section-eyebrow">— 定价方案 —</span>
+        <h2 class="section-title">选择适合您的版本</h2>
+        <p class="section-desc">
+          免费版即可满足村级日常使用需求，Pro 版提供局域网协同与高级特性，按需选择更灵活。
+        </p>
+      </header>
+
+      <div class="pricing-table-wrap">
+        <div class="pricing-col pricing-free">
+          <div class="pricing-head">
+            <h3>免费版</h3>
+            <div class="pricing-price">
+              <span class="price-num">¥0</span>
+              <span class="price-sub">永久免费</span>
+            </div>
+            <p class="pricing-desc">适合单用户或小型村落日常使用</p>
+          </div>
+          <ul class="pricing-features">
+            <li>
+              <span class="pf-check"></span>
+              居民管理
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              人口统计
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              风险排查
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              特殊人员管理
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              机构管理
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              乡村振兴
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              人民调解
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              地块管理
+            </li>
+            <li class="pf-no">
+              <span class="pf-cross"></span>
+              局域网共同管理
+            </li>
+            <li class="pf-no">
+              <span class="pf-cross"></span>
+              假期特色功能
+            </li>
+            <li class="pf-no">
+              <span class="pf-cross"></span>
+              数据备份冗余
+            </li>
+          </ul>
+          <div class="pricing-actions">
+            <a href="https://gitee.com/Hagkiest/VillageSmart/releases" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Gitee 下载
+            </a>
+            <a href="https://github.com/Hagkiest/VillageSmart/releases" target="_blank" rel="noopener" class="btn btn-ghost btn-block">
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.22.66-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.16.57.67.48A10 10 0 0 0 22 12c0-5.52-4.48-10-10-10z" fill="currentColor"/>
+              </svg>
+              GitHub 下载
+            </a>
+          </div>
+        </div>
+
+        <div class="pricing-col pricing-pro">
+          <div class="pricing-recommend-ribbon">推荐</div>
+          <div class="pricing-head">
+            <h3>Pro 版</h3>
+            <div class="pricing-price">
+              <span class="price-num">联系咨询</span>
+              <span class="price-sub">按需定制</span>
+            </div>
+            <p class="pricing-desc">适合多部门协同办公的村镇单位</p>
+          </div>
+          <ul class="pricing-features">
+            <li>
+              <span class="pf-check"></span>
+              <strong>免费版全部功能</strong>
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              <strong>局域网共同管理</strong>
+              <span class="pf-tag">新增</span>
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              假期特色功能
+              <span class="pf-tag">新增</span>
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              数据备份冗余
+              <span class="pf-tag">新增</span>
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              优先技术支持
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              定制化开发服务
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              数据迁移协助
+            </li>
+            <li>
+              <span class="pf-check"></span>
+              部署实施指导
+            </li>
+          </ul>
+          <div class="pricing-actions">
+            <a href="#contact" class="btn btn-primary btn-block btn-lg">
+              联系QQ咨询
+              <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true">
+                <path d="M5 12h14M13 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 局域网共同管理优势 ========== -->
+  <section class="section lan-section">
+    <div class="container">
+      <div class="lan-wrap">
+        <div class="lan-copy">
+          <span class="section-eyebrow">— Pro 特色功能 —</span>
+          <h2 class="section-title">局域网共同管理 · 多人协同更高效</h2>
+          <p class="section-desc">
+            Pro 版支持局域网部署，村内多终端、多部门可同时接入使用，
+            数据实时同步、无需外网即可多人协作，既保证了数据安全，又大幅提升办公效率。
+          </p>
+          <div class="lan-benefits">
+            <div class="lan-benefit">
+              <div class="lan-benefit-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <rect x="2" y="3" width="8" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <rect x="14" y="3" width="8" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <rect x="2" y="15" width="8" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <rect x="14" y="15" width="8" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M10 6h4M10 18h4M6 9v6M18 9v6" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <div>
+                <h4>多终端协同办公</h4>
+                <p>村支书、民政专干、计生专干等多人同时登录使用，各司其职、互不干扰。</p>
+              </div>
+            </div>
+            <div class="lan-benefit">
+              <div class="lan-benefit-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" stroke-dasharray="3 2"/>
+                  <circle cx="12" cy="12" r="3" fill="currentColor"/>
+                </svg>
+              </div>
+              <div>
+                <h4>数据实时同步</h4>
+                <p>一人录入、全员可见，数据变更即时同步到所有终端，告别信息不同步的困扰。</p>
+              </div>
+            </div>
+            <div class="lan-benefit">
+              <div class="lan-benefit-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <path d="M12 2L3 7v6c0 5 4 9 9 10 5-1 9-5 9-10V7L12 2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M12 12v5M9 15h6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h4>无需外网即可协作</h4>
+                <p>纯局域网运行，数据不经过公网传输，既安全又不依赖外部网络环境。</p>
+              </div>
+            </div>
+            <div class="lan-benefit">
+              <div class="lan-benefit-icon">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                  <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div>
+                <h4>响应速度更快</h4>
+                <p>局域网内访问延迟低、速度快，操作流畅不卡顿，不受外部网络带宽限制。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="lan-visual">
+          <div class="lan-diagram">
+            <div class="lan-server">
+              <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                <rect x="3" y="4" width="18" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                <rect x="3" y="14" width="18" height="6" rx="1" fill="none" stroke="currentColor" stroke-width="2"/>
+                <circle cx="7" cy="7" r="0.8" fill="currentColor"/>
+                <circle cx="7" cy="17" r="0.8" fill="currentColor"/>
+                <line x1="11" y1="7" x2="17" y2="7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                <line x1="11" y1="17" x2="17" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              <span>本地服务器</span>
+            </div>
+            <div class="lan-lines">
+              <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="lan-clients">
+              <div class="lan-client">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>村干部</span>
+              </div>
+              <div class="lan-client">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="12" cy="17" r="1" fill="currentColor"/>
+                </svg>
+                <span>民政专干</span>
+              </div>
+              <div class="lan-client">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <rect x="5" y="2" width="14" height="20" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="12" cy="18" r="1" fill="currentColor"/>
+                </svg>
+                <span>计生专干</span>
+              </div>
+              <div class="lan-client">
+                <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="13" rx="1.5" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M8 21h8M12 17v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <span>党建专干</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CTA / 联系QQ ========== -->
+  <section class="section cta-section" id="contact">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-copy">
+          <span class="section-eyebrow light">— 联系我们 —</span>
+          <h2>添加QQ · 获取系统演示与试用</h2>
+          <p>
+            想要了解更多功能细节？需要专属演示与实施咨询？
+            直接添加 Hispirit 团队QQ，我们将为您提供一对一的产品讲解与试用指导。
+          </p>
+          <div class="cta-benefits">
+            <span>✓ 免费产品演示</span>
+            <span>✓ 一对一咨询</span>
+            <span>✓ 本地化部署方案</span>
+          </div>
+        </div>
+
+        <div class="qq-contact-card">
+          <div class="qq-icon-wrap">
+            <svg viewBox="0 0 48 48" width="56" height="56" aria-hidden="true">
+              <ellipse cx="24" cy="26" rx="16" ry="15" fill="#fff"/>
+              <ellipse cx="24" cy="26" rx="14" ry="13" fill="#12B7F5"/>
+              <ellipse cx="18" cy="23" rx="2.5" ry="3" fill="#fff"/>
+              <ellipse cx="30" cy="23" rx="2.5" ry="3" fill="#fff"/>
+              <path d="M19 30 Q24 34 29 30" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+              <path d="M14 38 Q16 34 20 34" fill="none" stroke="#12B7F5" stroke-width="2" stroke-linecap="round"/>
+              <path d="M34 38 Q32 34 28 34" fill="none" stroke="#12B7F5" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h4>联系QQ</h4>
+          <div class="qq-number" id="qqNumber">2375067016</div>
+          <button class="btn btn-primary btn-block btn-lg" onclick="copyQQ()">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+              <rect x="9" y="9" width="11" height="11" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+              <path d="M5 15V5a2 2 0 0 1 2-2h10" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+            复制QQ号
+          </button>
+          <p class="qq-hint">添加时请备注"村务系统咨询"，我们将尽快回复</p>
+
+          <div class="contact-divider">
+            <span>或</span>
+          </div>
+
+          <div class="email-contact">
+            <div class="email-icon">
+              <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 7l9 6 9-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="email-info">
+              <span class="email-label">邮箱联系</span>
+              <a href="mailto:cwgl@hagkiest.top" class="email-link">cwgl@hagkiest.top</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 页脚 ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 32 32" width="28" height="28">
+              <path d="M4 24 L16 6 L28 24 Z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+              <path d="M10 24 L16 16 L22 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="brand-text">
+            <span class="brand-name">Hispirit</span>
+            <span class="brand-sub">农村村务管理系统</span>
+          </span>
+        </div>
+        <p class="footer-desc">
+          数字乡村，智慧村务。Hispirit 团队致力于用科技赋能乡村治理现代化。
+        </p>
+      </div>
+
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>产品功能</h5>
+          <ul>
+            <li><a href="#features">居民管理</a></li>
+            <li><a href="#features">人口统计</a></li>
+            <li><a href="#features">社会救助</a></li>
+            <li><a href="#features">党建管理</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>解决方案</h5>
+          <ul>
+            <li><a href="#modules">村级治理</a></li>
+            <li><a href="#modules">乡镇统筹</a></li>
+            <li><a href="#security">数据安全</a></li>
+            <li><a href="#contact">联系咨询</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>关于我们</h5>
+          <ul>
+            <li><a href="#">Hispirit 团队</a></li>
+            <li><a href="#contact">联系我们</a></li>
+            <li><a href="#">合作伙伴</a></li>
+            <li><a href="#">加入我们</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>免费下载</h5>
+          <ul>
+            <li>
+              <a href="https://gitee.com/Hagkiest/VillageSmart/releases" target="_blank" rel="noopener">Gitee 下载</a>
+            </li>
+            <li>
+              <a href="https://github.com/Hagkiest/VillageSmart/releases" target="_blank" rel="noopener">GitHub 下载</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© 2026 Hispirit Team · 农村村务管理系统 · 让乡村治理更智慧</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 提交成功提示 -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="main.js"></script>
+</body>
+</html>
